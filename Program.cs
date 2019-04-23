@@ -12,10 +12,30 @@ namespace b6_mass
         {
             //B6_1();
             //B6_2();
-            B6_3();
+            //B6_3();
+            B6_5();
             Console.ReadLine();
         }
 
+        public static void B6_1()
+        {
+            int[] mas1 = new int[6];
+            Console.WriteLine("Enter numbers for mas1");
+            for (int i = 0; i < mas1.Length; i++)
+            {
+                mas1[i] = Convert.ToInt32(Console.ReadLine());
+
+
+            }
+
+            for (int i = 0; i < mas1.Length; i++)
+            {
+
+                Console.Write($" {mas1[i]}");
+
+            }
+
+        }
 
         public static void B6_2()
         {
@@ -86,25 +106,7 @@ namespace b6_mass
 
         }
 
-        public static void B6_1()
-        {
-            int[] mas1 = new int[6];
-            Console.WriteLine("Enter numbers for mas1");
-            for (int i = 0; i < mas1.Length; i++)
-            {
-                mas1[i] = Convert.ToInt32(Console.ReadLine());
-
-
-            }
-
-            for (int i = 0; i < mas1.Length; i++)
-            {
-
-                Console.Write($" {mas1[i]}");
-
-            }
-
-        }
+       
 
         public static void B6_3()
         {
@@ -139,9 +141,8 @@ namespace b6_mass
                     }
                 }
             }
-            Console.WriteLine(" ");
-
-                Console.WriteLine("ваш массив после сортировки");
+          
+                    Console.WriteLine("ваш массив после сортировки");
                 for (int i = 0; i < mas.Length; i++)
                 {
 
@@ -149,6 +150,29 @@ namespace b6_mass
 
                 }
 
+        }
+
+        public static void B6_5()
+        {
+            string s1 = "123456789xx13";
+            Console.WriteLine("Введите строку");
+            string str = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Ваша строка до обреза: "+ str);
+
+            Console.WriteLine("длина строки " + str.Length);
+
+            if (str.Length > 13)
+            {
+                str= str.Remove(13).Insert(13, "...");
+                
+                Console.WriteLine("Ваша строка обрезана " + str);
+                
+            }
+
+            else
+            {
+                Console.WriteLine("Ваша строка" + str);
+            }
         }
     }
 }
