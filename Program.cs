@@ -13,7 +13,8 @@ namespace b6_mass
             //B6_1();
             //B6_2();
             //B6_3();
-            B6_5();
+            //B6_5();
+            B6_6();
             Console.ReadLine();
         }
 
@@ -154,7 +155,6 @@ namespace b6_mass
 
         public static void B6_5()
         {
-            string s1 = "123456789xx13";
             Console.WriteLine("Введите строку");
             string str = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Ваша строка до обреза: "+ str);
@@ -173,6 +173,35 @@ namespace b6_mass
             {
                 Console.WriteLine("Ваша строка" + str);
             }
+        }
+
+        public static void B6_6()
+        {
+            Console.WriteLine("Введите стишок");
+            string str = Convert.ToString(Console.ReadLine());
+            str = str.Replace("о", "а");
+            str = str.Replace("л", "ль");
+            str = str.Replace("ть", "т");
+            //Console.WriteLine("Ваша стих в строку " + str);
+            string[] words = str.Split(new char[] { ';' });
+
+            foreach (string s in words)
+            {
+                Console.WriteLine(s);
+            }
+            
+            /*if (str.Contains(";"))
+            {
+                str = str.Remove(13).Insert(13, "...");
+
+                Console.WriteLine("Ваша строка обрезана " + str);
+
+            }
+
+            else
+            {
+                Console.WriteLine(str);
+            }*/
         }
     }
 }
