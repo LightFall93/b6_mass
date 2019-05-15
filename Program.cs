@@ -66,7 +66,6 @@ namespace b6_mass
                 {
                     if (mas2[i, j] >= maxValue)
                     {
-                        
                         maxValue = mas2[i, j];
                     }
                 }
@@ -74,8 +73,6 @@ namespace b6_mass
                 Console.WriteLine("Max in row(строке под номером "+(i+1)+" = " + maxValue);
             }
         }
-
-       
 
         public static void B6_3()
         {
