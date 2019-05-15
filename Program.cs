@@ -11,10 +11,10 @@ namespace b6_mass
         static void Main(string[] args)
         {
             //B6_1();
-            //B6_2();
+            B6_2();
             //B6_3();
             //B6_5();
-            B6_6();
+            //B6_6();
             Console.ReadLine();
         }
 
@@ -42,12 +42,10 @@ namespace b6_mass
         {
             int[,] mas2 = new int[3,3]
             {
-                {9,4,7},{3,6,3},{2,1,5}
+                {7,5,2},{3,6,1},{2,1,0}
             };
             int rows = mas2.GetUpperBound(0)+1;
             int columns = mas2.Length/rows;
-            Console.WriteLine(rows);
-            Console.WriteLine(columns);
 
             Console.WriteLine("Сам массив:");
 
@@ -59,52 +57,22 @@ namespace b6_mass
                 }
                 Console.WriteLine();
             }
-
+            
             for (int i = 0; i < rows; i++)
             {
-                
-                int maxValue = 0;
-               
-                for (int j = 0; j < columns-1; j++)
+                int maxValue = mas2[i, 0];
+
+                for (int j = 0; j < columns; j++)
                 {
-                    if ((mas2[j,i] > mas2[j + 1, i]) && (mas2[j, i] > maxValue))
+                    if (mas2[i, j] >= maxValue)
                     {
                         
-                        maxValue = mas2[j, i];
-                    }
-                    else
-                    {
-                        
+                        maxValue = mas2[i, j];
                     }
                 }
-               
-                Console.WriteLine("Max in row"+(i+1)+" = " + maxValue);
+
+                Console.WriteLine("Max in row(строке под номером "+(i+1)+" = " + maxValue);
             }
-
-            
-            /*if (mas2[0, 0] < mas2[0, 1] & mas2[0, 0] < mas2[0, 2])
-            {
-                if (mas2[0, 1] < mas2[0, 2] & mas2[0,1] < mas2[0, 0])
-                {
-                    if (mas2[0, 2] < mas2[0, 0] & mas2[0, 1] < mas2[0, 0])
-                    {
-
-                    }
-
-                }
-                else
-                {
-                    Console.WriteLine(mas2[0, 1]);
-                }
-            }
-
-            else
-            {
-                Console.WriteLine(mas2[0, 0]);
-            }*/
-
-
-
         }
 
        
